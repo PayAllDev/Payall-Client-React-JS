@@ -126,7 +126,7 @@ nav ul li:hover::before,
 nav ul li:hover::after {
     width: 10px;
     height: 10px;
-    border-color: #001542;
+    border-color: #fff;
 }
 
 nav ul li a {
@@ -136,6 +136,7 @@ nav ul li a {
     letter-spacing: 1px;
     font-family: PoppinsLight;
     transition: .3s;
+    cursor: pointer;
 
 }
 
