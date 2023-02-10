@@ -1,5 +1,6 @@
 // * Dependencies Required 
 import { useContext } from "react";
+import { MdSettings } from "react-icons/md"
 
 // * Modules Required
 
@@ -187,7 +188,7 @@ const TopNavBarActionButtons = () => {
 
             <div className="menuSquareButton menuButton" id="menuButtonShowSettings">
 
-                <i className="fa fa-gear"></i>
+                <MdSettings color="#01061d" size={24} />
 
             </div>
 
