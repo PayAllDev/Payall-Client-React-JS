@@ -1,11 +1,9 @@
 // * Dependencies Required 
-
 import { useContext } from "react";
-import { isMobileDevice } from "../../lib/system";
 
 // * Modules Required
 
-// import { isMobileDevice } from "../../lib/system";
+import { isMobileDevice } from "../../lib/system";
 
 // * view Styles
 
@@ -47,11 +45,11 @@ const DesktopTopNavBar = () => {
 
     return (
 
-        <div class="topMenu">
+        <div className="topMenu">
 
-            <div class="topMenuBackground"></div>
+            <div className="topMenuBackground"></div>
 
-            <div class="topMenuContent">
+            <div className="topMenuContent">
 
                 <TopNavBarLogo />
                 <TopNavBarMenu />
@@ -70,7 +68,7 @@ const TopNavBarLogo = () => {
 
     return (
 
-        <div class="menuLogo">
+        <div className="menuLogo">
 
             <a href="./">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="50px"
@@ -144,7 +142,7 @@ const TopNavBarMenu = () => {
 
     return (
 
-        <div class="menuNav">
+        <div className="menuNav">
 
             <nav>
 
@@ -169,10 +167,10 @@ const TopNavBarActionButtons = () => {
 
     return (
 
-        <div class="menuButtons">
+        <div className="menuButtons">
 
             <a href="./login.html">
-                <div class="menuRectangularButton menuButton Login" id="menuButtonLogin">
+                <div className="menuRectangularButton menuButton Login" id="menuButtonLogin">
 
                     <p>Iniciar sesión</p>
 
@@ -180,16 +178,16 @@ const TopNavBarActionButtons = () => {
             </a>
 
             <a href="./register.html">
-                <div class="menuRectangularButton menuButton Register" id="menuButtonRegister">
+                <div className="menuRectangularButton menuButton Register" id="menuButtonRegister">
 
                     <p>Registrarme</p>
 
                 </div>
             </a>
 
-            <div class="menuSquareButton menuButton" id="menuButtonShowSettings">
+            <div className="menuSquareButton menuButton" id="menuButtonShowSettings">
 
-                <i class="fa fa-gear"></i>
+                <i className="fa fa-gear"></i>
 
             </div>
 

@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom/client'
 
 // * Modules Required
 
+import { AppProvider } from './app/Context'
+
 // * view Styles
 
 import './index.css'
@@ -14,12 +16,20 @@ import './index.css'
 
 import TopNavBar from './components/shared/TopNavBar'
 
+import Home_view from './views/home_view'
+
 // * view to Return
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    
-    <TopNavBar />
+
+    <AppProvider>
+
+      <TopNavBar />
+
+      <Home_view />
+
+    </AppProvider>
 
   </React.StrictMode>,
 )
