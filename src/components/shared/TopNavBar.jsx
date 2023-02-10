@@ -151,6 +151,7 @@ const TopNavBarMenu = () => {
 
                     <li><a id="Menusections3">Inicio</a></li>
                     <li><a id="Menusections3">Proyecto</a></li>
+                    <li><a id="Menusections3">Aprende con Articulos</a></li>
                     <li><a id="Menusections3">Simulador</a></li>
                     <li><a id="Menusections3">Mercado</a></li>
 

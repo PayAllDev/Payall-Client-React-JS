@@ -1,0 +1,43 @@
+/* * Articles Section * */
+
+.Home-View-Articles-Section{
+    width: 100%;
+    height: 100%;
+    background-color: #01061d;
+    position: relative;    
+}
+
+.Home-View-Articles-Background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.Home-View-Articles-Content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-View-Articles-Margin{
+    width: 85%;
+    height: auto;
+}
+
+.Home-View-Articles-Title-Label{
+    font-family: PoppinsMedium;
+    font-size: 24px;
+    color: #fff;
+}
+
+.Home-View-Article-Subtitle{
+    font-family: PoppinsLight;
+    font-size: 16px;
+    color: #ffffff;
+}

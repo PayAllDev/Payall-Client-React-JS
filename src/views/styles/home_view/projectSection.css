@@ -38,11 +38,19 @@
     height: auto;
 }
 
+.Home-View-Project-Title-Decoration-Label{
+    font-style: normal;
+    background: #00EABE;
+    background: linear-gradient(to right, #00EABE 6%, #7affeb 80%, #4eeded 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: .1rem;
+}
+
 .Home-View-Project-Title-Label{
     font-family: PoppinsMedium;
     font-size: 24px;
     color: #fff;
-    white-space: nowrap;
 }
 
 .Home-View-Project-Text-Label{

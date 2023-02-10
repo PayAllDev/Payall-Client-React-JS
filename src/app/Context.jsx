@@ -12,6 +12,7 @@ const defaultContext = {
     app: {
         app_name: 'PayAll',
         current_view: 'Home',
+        current_market: 'market_S&P'
     },
     user: {
         is_session_created: false,

@@ -1,0 +1,76 @@
+/* * Simulator Section * */
+
+.Home-View-Market-Container{
+    width: 100%;
+    height: 100%;
+    background-color: #01061d;
+    position: relative;    
+}
+
+.Home-View-Market-Background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.Home-View-Market-Content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+}
+
+.Home-View-Market-Margin{
+    margin: auto;
+    width: 85%;
+    height: auto;
+    padding-top: 80px;
+}
+
+.Home-View-Market-Title-Label{
+    font-family: PoppinsMedium;
+    font-size: 24px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.Market-Container-Box{
+    width: 100%;
+    height: auto;
+}
+
+.Market-Info-Display-Title{
+    font-family: PoppinsLight;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.Market-Info-Display-Controller{
+    width: 100%;
+    height: 40px;
+}
+
+.Market-Info-Display-Controller{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Market-Info-Select-Button{
+    padding: 10px 20px 10px 20px;
+    font-family: PoppinsLight;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #ffffff39;
+    margin-right: 10px;
+}
+
+.Market-Info-Selected-Option{
+    background-color: #00eabe;
+    color: #01061d;
+}
