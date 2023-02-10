@@ -1,0 +1,61 @@
+/* * Project Section * */
+
+.Home-View-Project-Section{
+    width: 100%;
+    height: 100%;
+    background-color: #01061d;
+    position: relative;    
+}
+
+.Home-View-Project-Background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.Home-View-Project-Content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-View-Project-Margin{
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Home-View-Project-Text-Container{
+    width: 55%;
+    height: auto;
+}
+
+.Home-View-Project-Title-Label{
+    font-family: PoppinsMedium;
+    font-size: 24px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.Home-View-Project-Text-Label{
+    font-family: PoppinsLight;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.Home-View-Project-Animation-Container{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

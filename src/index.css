@@ -17,6 +17,12 @@
 
 a {
   text-decoration: none;
+  color: #00eabe;
+}
+
+h1,
+p{
+  cursor: default;
 }
 
 body {

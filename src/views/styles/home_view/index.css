@@ -1,9 +1,24 @@
+.Home-View-Desktop-Container{
+    width: 100%;
+    height: 100%;
+    min-width: 1920px;
+    overflow-x: hidden;
+}
+
+.Home-View-Desktop-Container::-webkit-scrollbar {
+    width: 5px;
+    background-color: #01061d;
+}
+
+.Home-View-Desktop-Container::-webkit-scrollbar-thumb {
+    background: #02176c ;
+}
+
 .Home-View-Container{
     width: 100%;
     height: 100%;
     background-color: #01061d;
-    position: relative;
-    overflow: hidden;
+    position: relative;    
 }
 
 .Home-View-Background{
@@ -11,6 +26,7 @@
     height: 100%;
     position: absolute;
     z-index: 2;
+    overflow: hidden;
 }
 
 .Home-Background-Shape-0{
@@ -40,4 +56,51 @@
     height: 100%;
     position: absolute;
     z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-View-Margin{
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Home-View-Text-Left-Side{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.Home-View-Title-Label{
+    font-family: PoppinsMedium;
+    font-size: 36px;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+.Home-View-subtitle-Label{
+    height: 0px;
+    font-family: PoppinsLight;
+    font-size: 16px;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+.Home-View-Vector-Right-Side{
+    width: 30%;
+    height: auto;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-View-Vector{
+    max-width: 90%;
 }
