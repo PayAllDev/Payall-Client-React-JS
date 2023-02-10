@@ -1,0 +1,211 @@
+/** Top Menu Styles **/
+
+.asd{
+    width: 100%;
+    height: 60px;
+    background-color: green;
+}
+
+.topMenu {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;    
+}
+
+.topMenuBackground{
+    width: 100%;
+    height: 100%;
+    background-color: #0f0d265d;
+    -webkit-backdrop-filter: blur(8px);
+    filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: 1px;
+    position: absolute;
+}
+
+.topMenuContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(0);
+
+}
+
+.menuButtonsLateral {
+    display: none;
+}
+
+.menuLogo {
+    width: 25%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.menuLogo a img {
+    width: 100%;
+    max-height: 50px;
+}
+
+.menuNav {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    margin: auto;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav ul {
+    margin: auto;
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: block;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-align: center;
+    padding: 10px 10px;
+}
+
+nav ul li:after,
+nav ul li:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0px solid transparent;
+    width: 0%;
+    height: 0%;
+    transition: all 0.3s ease;
+}
+
+nav ul li:after {
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;    
+}
+
+nav ul li:before {
+    width: 0%;
+    height: 0%;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+nav ul li:hover::before,
+nav ul li:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: #001542;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: PoppinsLight;
+    transition: .3s;
+
+}
+
+nav ul li a:hover {
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.255);
+}
+
+.menuButtons {
+    width: 25%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menuButton {
+    border-bottom: 0px solid #00000021;
+    transition: .3s;
+}
+
+.menuRectangularButton {
+    width: 140px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 38px;
+    /* cursor: pointer; */
+}
+
+.menuRectangularButton p {
+    font-family: PoppinsLight;
+    font-size: 15px;
+}
+
+.menuButtons .Login {
+    background-color: #001542;
+    color: #ffffff;
+}
+
+.menuButtons .Register {
+    background-color: #f4f6fc;
+}
+
+.menuButtons .Register p{
+    color: #02021e;    
+}
+
+.menuSquareButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #f4f6fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menuSquareButton i {
+    color: #02021e;
+    font-size: 20px;
+}
+
+.menuButton:hover {
+    border-bottom: 5px solid #00000021;
+}
