@@ -9,6 +9,7 @@ import Lottie from "lottie-react";
 import { AppContext } from "../../app/Context";
 import { isMobileDevice } from "../../lib/system";
 // import { isMobileDevice } from "../../lib/system";
+import { getCryptoMarketInfo } from "../../lib/forex";
 
 // * view Styles
 
@@ -40,7 +41,7 @@ const Home_view = () => {
 
 const HomeView_Desktop = () => {
 
-    test()
+    getCryptoMarketInfo()
 
     return (
 
@@ -258,13 +259,6 @@ const MarketContainer = () => {
 
 
             </div>
-
-            {
-
-
-
-
-            }
 
         </div>
 
