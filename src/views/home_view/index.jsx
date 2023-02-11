@@ -1,15 +1,13 @@
 // * Dependencies Required 
 
 import { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 
 
 // * Modules Required
 
 import { AppContext } from "../../app/Context";
-import { isMobileDevice } from "../../lib/system";
-// import { isMobileDevice } from "../../lib/system";
-import { getCryptoMarketInfo } from "../../lib/forex";
 
 // * view Styles
 
@@ -40,8 +38,6 @@ const Home_view = () => {
 }
 
 const HomeView_Desktop = () => {
-
-    getCryptoMarketInfo()
 
     return (
 
@@ -239,10 +235,9 @@ const MarketContainer = () => {
 
             <div className="Market-Info-Display-Controller">
 
-
                 <div className="Market-Info-Select-Button Market-Info-Selected-Option">
 
-                    Mercado Internacional
+                    Mercado de criptomonedas
 
                 </div>
 
@@ -251,14 +246,16 @@ const MarketContainer = () => {
                     Mercado Nacional
 
                 </div>
+
                 <div className="Market-Info-Select-Button">
 
-                    Mercado de criptomonedas
+                    Mercado Internacional
 
                 </div>
 
-
             </div>
+
+            <div className="Market-Info-Display-View"></div>
 
         </div>
 

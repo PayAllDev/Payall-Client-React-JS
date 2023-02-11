@@ -50,14 +50,10 @@
 .Market-Info-Display-Controller{
     width: 100%;
     height: 40px;
-}
-
-.Market-Info-Display-Controller{
-    width: 100%;
-    height: 40px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .Market-Info-Select-Button{
@@ -73,4 +69,11 @@
 .Market-Info-Selected-Option{
     background-color: #00eabe;
     color: #01061d;
+}
+
+.Market-Info-Display-View{
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+    background-color: green;
 }
