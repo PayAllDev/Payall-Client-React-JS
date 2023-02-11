@@ -1,13 +1,13 @@
 /* * Simulator Section * */
 
-.Home-View-Market-Container{
+.Home-View-Market-Container {
     width: 100%;
     height: 100%;
     background-color: #01061d;
-    position: relative;    
+    position: relative;
 }
 
-.Home-View-Market-Background{
+.Home-View-Market-Background {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -15,39 +15,39 @@
     overflow: hidden;
 }
 
-.Home-View-Market-Content{
+.Home-View-Market-Content {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 3;
 }
 
-.Home-View-Market-Margin{
+.Home-View-Market-Margin {
     margin: auto;
     width: 85%;
     height: auto;
     padding-top: 80px;
 }
 
-.Home-View-Market-Title-Label{
+.Home-View-Market-Title-Label {
     font-family: PoppinsMedium;
     font-size: 24px;
     color: #fff;
     white-space: nowrap;
 }
 
-.Market-Container-Box{
+.Market-Container-Box {
     width: 100%;
     height: auto;
 }
 
-.Market-Info-Display-Title{
+.Market-Info-Display-Title {
     font-family: PoppinsLight;
     font-size: 16px;
     color: #ffffff;
 }
 
-.Market-Info-Display-Controller{
+.Market-Info-Display-Controller {
     width: 100%;
     height: 40px;
     display: flex;
@@ -56,7 +56,7 @@
     margin-bottom: 20px;
 }
 
-.Market-Info-Select-Button{
+.Market-Info-Select-Button {
     padding: 10px 20px 10px 20px;
     font-family: PoppinsLight;
     font-size: 14px;
@@ -64,16 +64,71 @@
     border-radius: 15px;
     background-color: #ffffff39;
     margin-right: 10px;
+    cursor: pointer;
 }
 
-.Market-Info-Selected-Option{
+.Market-Info-Selected-Option {
     background-color: #00eabe;
     color: #01061d;
 }
 
-.Market-Info-Display-View{
+.Market-Info-Display-View {
     width: 100%;
-    height: 600px;
+    height: auto;
     max-height: 600px;
-    background-color: green;
+    margin-bottom: 20px;
+}
+
+.Market-Info-Top-Container {
+    width: 100%;
+    height: auto;
+}
+
+.Market-Info-Title-Table-Row-Container,
+.Market-Info-Row-Container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Market-Info-Title-Container,
+.Market-Info-Row-Title-Container {
+    width: 25%;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.Market-Info-Title-Label {
+    height: 0px;
+    font-family: PoppinsMedium;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.Market-Info-Text-Label {
+    font-family: PoppinsLight;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.Market-Info-Warning {
+    width: 100%;
+    height: auto;
+    background-color: #00eabe;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Market-Info-Warning-Label {
+    width: 98%;
+    height: 90%;
+    font-family: PoppinsMedium;
+    font-size: 16px;
+    color: #01061d;
 }

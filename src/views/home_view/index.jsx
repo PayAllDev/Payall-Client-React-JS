@@ -1,13 +1,14 @@
 // * Dependencies Required 
 
-import { useContext } from "react";
-import React, { useEffect, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import Lottie from "lottie-react";
 
 
 // * Modules Required
 
 import { AppContext } from "../../app/Context";
+import { getMarketData } from "../../services";
+import { formatToCurrency, formatToPercentage } from "../../lib/display";
 
 // * view Styles
 
@@ -227,6 +228,16 @@ const MarketSection = () => {
 
 const MarketContainer = () => {
 
+    const { context, setContext } = useContext(AppContext)
+
+    const changeMarketSelected = (marketToDisplay) => {
+
+        if (!marketToDisplay) return
+
+        setContext({ app: { ...context.app, current_market: marketToDisplay }, user: { ...context.user } })
+
+    }
+
     return (
 
         <div className="Market-Container-Box">
@@ -235,19 +246,19 @@ const MarketContainer = () => {
 
             <div className="Market-Info-Display-Controller">
 
-                <div className="Market-Info-Select-Button Market-Info-Selected-Option">
+                <div className={context.app.current_market == 'crypto' ? "Market-Info-Select-Button Market-Info-Selected-Option" : "Market-Info-Select-Button"} onClick={() => changeMarketSelected('crypto')}>
 
                     Mercado de criptomonedas
 
                 </div>
 
-                <div className="Market-Info-Select-Button">
+                <div className={context.app.current_market == 'mxn' ? "Market-Info-Select-Button Market-Info-Selected-Option" : "Market-Info-Select-Button"} onClick={() => changeMarketSelected('mxn')}>
 
                     Mercado Nacional
 
                 </div>
 
-                <div className="Market-Info-Select-Button">
+                <div className={context.app.current_market == 'snp500' ? "Market-Info-Select-Button Market-Info-Selected-Option" : "Market-Info-Select-Button"} onClick={() => changeMarketSelected('snp500')}>
 
                     Mercado Internacional
 
@@ -255,12 +266,102 @@ const MarketContainer = () => {
 
             </div>
 
-            <div className="Market-Info-Display-View"></div>
+            <div className="Market-Info-Display-View">
+
+                <div className="Market-Info-Top-Container">
+
+                    <div className="Market-Info-Title-Table-Row-Container">
+
+                        <div className="Market-Info-Title-Container">
+                            <p className="Market-Info-Title-Label">Nombre</p>
+                        </div>
+
+                        <div className="Market-Info-Title-Container">
+                            <p className="Market-Info-Title-Label">Precio Actual</p>
+                        </div>
+
+                        <div className="Market-Info-Title-Container">
+                            <p className="Market-Info-Title-Label">Cambio 24h</p>
+                        </div>
+
+                        <div className="Market-Info-Title-Container">
+                            <p className="Market-Info-Title-Label">Volumen 24h</p>
+                        </div>
+
+                    </div>
+
+                    {
+
+                        // * This will display the results of the market selected
+                        context.app.current_market == 'crypto' ? CryptoMarketTableResults() : null
+
+                    }
+
+                </div>
+
+            </div>
+
+            <div className="Market-Info-Warning">
+
+                <p className="Market-Info-Warning-Label">Los datos del mercado mostrados en nuestra plataforma pueden ser inexactos y están sujetos a cambios. Payall no garantiza que estos datos representen el estado del mercado en tiempo real. Se trata de aproximaciones solo a efectos informativos y simulativos.</p>
+
+            </div>
 
         </div>
 
     )
 
+
+
 }
+
+const CryptoMarketTableResults = () => {
+
+    const [marketDataReceived, setmarketDataReceived] = useState([])
+
+    useEffect(() => {
+        getMarketData('crypto')
+            .then(data => {
+                console.log(data)
+                setmarketDataReceived(data);
+            });
+    }, [])
+
+    return (
+
+        Object.keys(marketDataReceived).map((currentElementName) => {
+
+            const currentElementValues = marketDataReceived[currentElementName]
+
+            return (
+
+                <div className="Market-Info-Row-Container" key={currentElementName}>
+
+                    <div className="Market-Info-Row-Title-Container">
+                        <p className="Market-Info-Text-Label">{currentElementName}</p>
+                    </div>
+
+                    <div className="Market-Info-Row-Title-Container">
+                        <p className="Market-Info-Text-Label">{formatToCurrency(currentElementValues.mxn)}</p>
+                    </div>
+
+                    <div className="Market-Info-Row-Title-Container">
+                        <p className="Market-Info-Text-Label">{formatToPercentage([currentElementValues.mxn_24h_change / 100])}</p>
+                    </div>
+
+                    <div className="Market-Info-Row-Title-Container">
+                        <p className="Market-Info-Text-Label">{formatToCurrency(currentElementValues.mxn_24h_vol)}</p>
+                    </div>
+
+                </div>
+
+            )
+
+        })
+
+    )
+
+}
+
 
 export default Home_view
