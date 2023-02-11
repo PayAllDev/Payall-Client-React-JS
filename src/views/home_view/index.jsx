@@ -7,7 +7,7 @@ import Lottie from "lottie-react";
 // * Modules Required
 
 import { AppContext } from "../../app/Context";
-import { getMarketData } from "../../services";
+import { getArticlesData, getMarketData } from "../../services";
 import { formatToCurrency, formatToPercentage } from "../../lib/display";
 
 // * view Styles
@@ -150,6 +150,15 @@ const ProjectSection = () => {
 
 const ArticlesList = () => {
 
+    const [articlesData, setarticlesData] = useState([])
+
+    useEffect(() => {
+        getArticlesData()
+            .then(data => {
+                setarticlesData(data);
+            });
+    }, [])
+
     return (
 
         <section className="Home-View-Articles-Section">
@@ -163,6 +172,48 @@ const ArticlesList = () => {
                     <h3 className="Home-View-Articles-Title-Label">Articulos para aprender</h3>
                     <p className="Home-View-Article-Subtitle">A continuación, encontraras artículos que te pueden ser de ayuda proveídos por Banamex, Reto Actinver y new Bing search</p>
 
+                    <div className="Home-View-Articles-Container">
+
+                        <div className="Home-View-Articles-Container-Margin">
+
+                            {
+
+                                articlesData.map(element => {
+
+                                    console.log(element);
+
+                                    return (
+
+                                        <div className="Article-Container" key={element.articleLink}><a href={element.articleLink} target='_blank'>
+
+                                            <div className="Article-Container-Image-Container">
+
+                                                <img src={element.articleImages} className="Article-Container-Image" />
+
+                                            </div>
+
+                                            <div className="Article-Container-Info-Container">
+
+                                                <p className="Article-Info-Title-Label">{element.articleName}</p>
+
+                                                <p className="Article-Info-Subtitle-Label">{element.articleSubtitle}</p>
+                                                
+                                                <p className="Article-Info-Author-Label">{element.articleAuthor}</p>
+
+                                            </div>
+
+                                        </a></div>
+
+                                    )
+
+                                })
+
+                            }
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -173,6 +224,8 @@ const ArticlesList = () => {
 
 
     )
+
+
 
 }
 
@@ -322,7 +375,6 @@ const CryptoMarketTableResults = () => {
     useEffect(() => {
         getMarketData('crypto')
             .then(data => {
-                console.log(data)
                 setmarketDataReceived(data);
             });
     }, [])

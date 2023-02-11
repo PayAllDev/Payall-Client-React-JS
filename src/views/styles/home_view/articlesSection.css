@@ -1,13 +1,13 @@
 /* * Articles Section * */
 
-.Home-View-Articles-Section{
+.Home-View-Articles-Section {
     width: 100%;
     height: 100%;
     background-color: #01061d;
-    position: relative;    
+    position: relative;
 }
 
-.Home-View-Articles-Background{
+.Home-View-Articles-Background {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -15,7 +15,7 @@
     overflow: hidden;
 }
 
-.Home-View-Articles-Content{
+.Home-View-Articles-Content {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -25,19 +25,123 @@
     align-items: center;
 }
 
-.Home-View-Articles-Margin{
+.Home-View-Articles-Margin {
     width: 85%;
     height: auto;
 }
 
-.Home-View-Articles-Title-Label{
+.Home-View-Articles-Title-Label {
     font-family: PoppinsMedium;
     font-size: 24px;
     color: #fff;
 }
 
-.Home-View-Article-Subtitle{
+.Home-View-Article-Subtitle {
     font-family: PoppinsLight;
     font-size: 16px;
     color: #ffffff;
+}
+
+.Home-View-Articles-Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+.Home-View-Articles-Container-Margin{
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.Home-View-Articles-Container-Margin::-webkit-scrollbar {
+    height: 5px;
+    background-color: #01061d;
+}
+
+.Home-View-Articles-Container-Margin::-webkit-scrollbar-thumb {
+    background: #02176c ;
+}
+
+.Article-Container {
+    width: 100%;
+    min-width: 350px;
+    height: 410px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.Article-Container:hover{
+    transform: scale(1.015);
+}
+
+.Article-Container-Image-Container{
+    width: 100%;
+    height: 100%;    
+    max-height: 195px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 15px;
+}
+
+.Article-Container-Image{
+    max-width: 100%;
+    min-height: 188px;
+    overflow: hidden;
+}
+
+.Article-Container-Info-Container{
+    width: 100%;
+    height: calc(100% - 190px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.Article-Info-Title-Label{
+    font-family: PoppinsMedium;
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.Article-Info-Subtitle-Label{
+    font-family: PoppinsLight;
+    font-size: 14px;
+    color: #fff;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.Article-Info-Author-Label{
+    font-family: PoppinsLight;
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
 }
