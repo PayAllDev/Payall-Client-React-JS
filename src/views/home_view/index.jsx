@@ -103,7 +103,11 @@ const ProjectSection = () => {
 
         <section className="Home-View-Project-Section">
 
-            <div className="Home-View-Project-Background"></div>
+            <div className="Home-View-Project-Background">
+
+                <div className="Home-Project-Background-Shape-0"></div>
+
+            </div>
 
             <div className="Home-View-Project-Content">
 
