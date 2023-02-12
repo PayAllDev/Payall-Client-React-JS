@@ -157,7 +157,7 @@ const TopNavBarActionButtons = () => {
 
         <div className="menuButtons">
 
-            <a href="./login.html">
+            <a href="#">
                 <div className="menuRectangularButton menuButton Login" id="menuButtonLogin">
 
                     <p>Iniciar sesión</p>
@@ -165,7 +165,7 @@ const TopNavBarActionButtons = () => {
                 </div>
             </a>
 
-            <a href="./register.html">
+            <a href="#">
                 <div className="menuRectangularButton menuButton Register" id="menuButtonRegister">
 
                     <p>Registrarme</p>
@@ -181,9 +181,17 @@ const TopNavBarActionButtons = () => {
 
 const TopNavBarMobileActionButtonContainer = () => {
 
+    const clickHandler = () => {
+
+        document.getElementById('Lateral-Menu-Container').style.display = 'flex'
+        
+        setTimeout(() => { document.getElementById('Lateral-Menu-Container').style.transform = 'translateX(0%)' },50)
+
+    }
+
     return (
 
-        <div className="Top-Nav-Bar-Mobile-Action-Button-Container">
+        <div className="Top-Nav-Bar-Mobile-Action-Button-Container" onClick={clickHandler}>
 
             <div className="Top-Nav-Bar-Mobile-Action-Button">
 

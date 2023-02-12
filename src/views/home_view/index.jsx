@@ -2,6 +2,7 @@
 
 import { useContext, useState, useEffect } from "react";
 import Lottie from "lottie-react";
+import { MdClose } from "react-icons/md"
 
 
 // * Modules Required
@@ -43,11 +44,101 @@ const HomeView_Desktop = () => {
 
         <div className="Home-View-Desktop-Container">
 
+            <MobileLateralMenu />
             <TopSection />
             <ProjectSection />
             <ArticlesList />
             <SimulatorSection />
             <MarketSection />
+
+        </div>
+
+    )
+
+}
+
+const MobileLateralMenu = () => {
+
+    const clickHandler = () => {
+
+        document.getElementById('Lateral-Menu-Container').style.transform = 'translateX(100%)'
+
+        setTimeout(() => { document.getElementById('Lateral-Menu-Container').style.display = 'none' },300)
+
+    }
+
+    return (
+
+        <div className="Lateral-Menu-Container" id="Lateral-Menu-Container">
+
+            <div className="Lateral-Menu-Background"></div>
+
+            <div className="Lateral-Menu-Content">
+
+                <div className="Lateral-Menu-Top-Container">
+
+                    <p className="Lateral-Menu-Title-Label">Menu</p>
+
+                    <div className="Top-Nav-Bar-Mobile-Action-Button-Container-Lateral" onClick={clickHandler}>
+
+                        <div className="Top-Nav-Bar-Mobile-Action-Button">
+
+                            <MdClose size={20} color="#ffffff" />
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <a href="#top"><div className="Lateral-Menu-Option-Container" onClick={clickHandler}>
+
+                    <p className="Lateral-Menu-Option-Label">Inicio</p>
+
+                </div></a>
+
+                <a href="#project"><div className="Lateral-Menu-Option-Container" onClick={clickHandler}>
+
+                    <p className="Lateral-Menu-Option-Label">Proyecto</p>
+
+                </div></a>
+
+                <a href="#learn"><div className="Lateral-Menu-Option-Container" onClick={clickHandler}>
+
+                    <p className="Lateral-Menu-Option-Label">Aprende con Articulos</p>
+
+                </div></a>
+
+                <a href="#simulator"><div className="Lateral-Menu-Option-Container" onClick={clickHandler}>
+
+                    <p className="Lateral-Menu-Option-Label">Simulador</p>
+
+                </div></a>
+
+                <a href="#market"><div className="Lateral-Menu-Option-Container" onClick={clickHandler}>
+
+                    <p className="Lateral-Menu-Option-Label">Mercado</p>
+
+                </div></a>
+
+                <div className="Lateral-Menu-Session-Buttons-Container">
+
+                    <div className="Lateral-Menu-Session-Button">
+
+                        <p className="Lateral-Menu-Session-Button-Label">Iniciar Sesion</p>
+
+                    </div>
+
+                    <div className="Lateral-Menu-Session-Button Lateral-Menu-Session-Button-Secundary">
+
+                        <p className="Lateral-Menu-Session-Button-Label">Registrarme</p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -307,7 +398,7 @@ const MarketContainer = () => {
 
                     Mercado de criptomonedas
 
-                </div>            
+                </div>
 
             </div>
 
