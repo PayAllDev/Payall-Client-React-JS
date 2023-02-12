@@ -229,6 +229,42 @@ const ProjectSection = () => {
 
                 </div>
 
+                <div className="Home-View-Project-Keywords-Container">
+
+                    <div className="Home-View-Project-Slider-Contanier">
+
+                        <div className="Home-View-Project-Slider-Option-Container">
+
+                            <p className="Home-View-Project-Slider-Option-Title-Label">Mision</p>
+                            <p className="Home-View-Project-Slider-Option-Subtitle-Label">Informar a jóvenes adultos cómo lograr una vida financiera saludable con ahorro, inversiones y pensamiento crítico en compras. Demostrar que la planificación conduce a resultados futuros, evitando depender de hijos.</p>
+
+                        </div>
+
+                        <div className="Home-View-Project-Slider-Option-Container">
+
+                            <p className="Home-View-Project-Slider-Option-Title-Label">Aprende</p>
+                            <p className="Home-View-Project-Slider-Option-Subtitle-Label">Nutre tu conocimiento sobre las finanzas personales a través de artículos publicades por entidades bancarias y de la mano de expertos en la materia.</p>
+
+                        </div>
+
+                        <div className="Home-View-Project-Slider-Option-Container">
+
+                            <p className="Home-View-Project-Slider-Option-Title-Label">Estrategia</p>
+                            <p className="Home-View-Project-Slider-Option-Subtitle-Label">Mediante un curso de 6 meses aprende sobre finanzas personales y estrategias de inversión y ahorro con el fin de preparar a los usuarios para crear su propia estrategia de inversión para el retiro laboral</p>
+
+                        </div>                        
+
+                        <div className="Home-View-Project-Slider-Option-Container">
+
+                            <p className="Home-View-Project-Slider-Option-Title-Label">Simula</p>
+                            <p className="Home-View-Project-Slider-Option-Subtitle-Label">Demuestra tus habilidades a través del simulador de mercado de PayAll</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
 
             </div>
 

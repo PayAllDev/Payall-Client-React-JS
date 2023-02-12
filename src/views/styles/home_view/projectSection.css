@@ -12,8 +12,8 @@
 
 .Home-View-Project-Section {
     width: 100%;
-    height: 100%;
-    min-height: 100vh;
+    height: auto;
+    min-height: 130vh;
     background-color: #01061d;
     position: relative;
 }
@@ -40,12 +40,14 @@
 
 .Home-View-Project-Content {
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     position: absolute;
     z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .Home-View-Project-Margin {
@@ -91,17 +93,54 @@
     align-items: center;
 }
 
+.Home-View-Project-Keywords-Container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-View-Project-Slider-Contanier{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Home-View-Project-Slider-Option-Container{
+    width: 22%;
+    height: auto;
+}
+
+.Home-View-Project-Slider-Option-Title-Label{
+    font-family: PoppinsMedium;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.Home-View-Project-Slider-Option-Subtitle-Label{
+    font-family: PoppinsLight;
+    font-size: 16px;
+    color: #ffffff;
+}
+
 /* * Laptop * */
 
 @media screen and (min-width:600px) and (max-width:1600px) {
 
     .Home-View-Project-Section{
-        padding-bottom: 20%;
+        padding-bottom: 60%;
     }
 
     .Home-View-Project-Content{
         padding-top: 5%;        
-    }    
+    }
+
+    .Home-Project-Background-Shape-0{
+        right: 2%;
+    }
 
 }
 
@@ -112,7 +151,7 @@
     .Home-View-Project-Section{
         width: 100vw;
         height: auto;
-        min-height: 140%;
+        min-height: 170%;
         overflow-y: hidden;
     }
 
@@ -147,6 +186,38 @@
 
     .Home-View-Project-Animation-Container{
         width: 100%;
+    }
+
+    .Home-View-Project-Keywords-Container{
+        margin-top: 60px;
+    }
+
+    .Home-View-Project-Slider-Contanier{
+        margin: auto;
+        width: 80%;
+        height: 175px;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .Home-View-Project-Slider-Option-Container{
+        min-width: 225px;
+        height: 100%;
+        margin-right: 20px;
+        scroll-snap-align: start;
+    }
+
+    .Home-View-Project-Slider-Option-Title-Label{
+        font-size: 16px;
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    
+    .Home-View-Project-Slider-Option-Subtitle-Label{
+        font-size: 12px;
+        color: #ffffff;
     }
     
 }

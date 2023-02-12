@@ -22,7 +22,8 @@
     z-index: 3;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 80px;
 }
 
 .Home-View-Articles-Margin {
@@ -146,6 +147,10 @@
 }
 
 @media screen and (min-width:0px) and (max-width:414px) {
+
+    .Home-View-Articles-Section{
+        height: 50vh;
+    }
 
     .Home-View-Articles-Title-Label {
         font-size: 14px;
