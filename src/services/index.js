@@ -1,5 +1,5 @@
 
-const APIURL = 'https://api.webdesignnodes.com:2279/'
+const APIURL = 'https://api.webdesignnodes.com/'
 
 export const getMarketData = async (marketCategory) => {
 
