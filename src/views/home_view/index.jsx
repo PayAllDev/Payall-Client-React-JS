@@ -33,7 +33,6 @@ const Home_view = () => {
 
         <HomeView_Desktop />
 
-
     )
 
 }
@@ -47,7 +46,7 @@ const HomeView_Desktop = () => {
             <TopSection />
             <ProjectSection />
             <ArticlesList />
-            {/* <SimulatorSection /> */}
+            <SimulatorSection />
             <MarketSection />
 
         </div>
@@ -123,7 +122,7 @@ const ProjectSection = () => {
 
                         <p className="Home-View-Project-Text-Label">Así que decidí combinar mi proyecto anterior titulado PayAll (a falta de un nombre más creativo) y mi proyecto final. </p>
 
-                        <p className="Home-View-Project-Text-Label">Les presento el simulador de mercado de PayAll solo tienes que registrar tu usuario y contraseña, para acceder a una cuenta en la que se otorgara de un <a>$ 1,000,000.00 MXN ficticios</a> para que simules compras y ventas en el mercado de acciones y criptomonedas, siéntete libre de competir y demostrar tus habilidades.</p>
+                        <p className="Home-View-Project-Text-Label">Les presento el simulador de mercado de PayAll solo tienes que registrar tu usuario y contraseña, para acceder a una cuenta en la que se otorgara de un <a>$ 1,000,042.00 MXN ficticios</a> para que simules compras y ventas en el mercado de acciones y criptomonedas, siéntete libre de competir y demostrar tus habilidades.</p>
 
                         <p className="Home-View-Project-Text-Label">También en caso de que no tengas mucha idea sobre inversiones y finanzas personales puedes acceder a muchos artículos en los cuales se enseña sobre los temas. Espero te sirva, si aun así tienes dudas no dudes en contactarme a través de mi correo <a href="mailto:armandoperalta.simulator@webdesignnodes.com">armandoperalta.simulator@webdesignnodes.com</a>  o a través de mi cuenta de Twitter <a href="https://twitter.com/XxTavo16xX">@XxTavo16xX</a></p>
 
@@ -434,7 +433,7 @@ const SNPMarketTableResults = () => {
                     </div>
 
                     <div className="Market-Info-Row-Title-Container">
-                        <p className="Market-Info-Text-Label">{formatToCurrency(element.price)}</p>
+                        <p className="Market-Info-Text-Label">{formatToCurrency([element.price * 18.66])}</p>
                     </div>
 
                     <div className="Market-Info-Row-Title-Container">

@@ -48,11 +48,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 40px;
     overflow: hidden;
 }
 
-.Home-View-Articles-Container-Margin{
+.Home-View-Articles-Container-Margin {
     width: 95%;
     height: auto;
     display: flex;
@@ -70,7 +69,7 @@
 }
 
 .Home-View-Articles-Container-Margin::-webkit-scrollbar-thumb {
-    background: #F3E600 ;
+    background: #F3E600;
 }
 
 .Article-Container {
@@ -88,13 +87,13 @@
     transition: .3s;
 }
 
-.Article-Container:hover{
+.Article-Container:hover {
     transform: scale(1.015);
 }
 
-.Article-Container-Image-Container{
+.Article-Container-Image-Container {
     width: 100%;
-    height: 100%;    
+    height: 100%;
     max-height: 195px;
     overflow: hidden;
     display: flex;
@@ -103,15 +102,15 @@
     border-radius: 15px;
 }
 
-.Article-Container-Image{
+.Article-Container-Image {
     max-width: 100%;
     min-height: 188px;
     overflow: hidden;
 }
 
-.Article-Container-Info-Container{
+.Article-Container-Info-Container {
     width: 100%;
-    height: calc(100% - 190px);
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -119,7 +118,7 @@
 }
 
 
-.Article-Info-Title-Label{
+.Article-Info-Title-Label {
     font-family: PoppinsMedium;
     font-size: 16px;
     color: #fff;
@@ -129,7 +128,7 @@
     -webkit-box-orient: vertical;
 }
 
-.Article-Info-Subtitle-Label{
+.Article-Info-Subtitle-Label {
     font-family: PoppinsLight;
     font-size: 14px;
     color: #fff;
@@ -139,9 +138,68 @@
     -webkit-box-orient: vertical;
 }
 
-.Article-Info-Author-Label{
+.Article-Info-Author-Label {
     font-family: PoppinsLight;
     font-size: 14px;
     color: #fff;
     white-space: nowrap;
+}
+
+@media screen and (min-width:0px) and (max-width:414px) {
+
+    .Home-View-Articles-Title-Label {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .Home-View-Article-Subtitle {
+        font-size: 10px;
+    }
+
+    .Home-View-Articles-Container-Margin{
+        width: 100%;
+        padding-left: 5px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .Article-Container{
+        min-width: 250px;
+        height: 320px;
+        scroll-snap-align: start;
+    }
+
+    .Article-Container:hover{
+        transform: none;
+    }
+
+    .Article-Container:focus {
+        outline: none !important;
+    }
+
+    .Article-Container-Image-Container{
+        max-height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .Article-Container-Info-Container{
+        height: 150px;
+    }
+
+    .Article-Info-Title-Label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .Article-Info-Subtitle-Label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .Article-Info-Author-Label {
+        font-size: 12px;
+    }
+
 }

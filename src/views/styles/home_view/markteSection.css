@@ -123,6 +123,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .Market-Info-Warning-Label {
@@ -131,4 +132,61 @@
     font-family: PoppinsMedium;
     font-size: 16px;
     color: #01061d;
+}
+
+@media screen and (min-width:0px) and (max-width:414px) {
+
+    .Home-View-Market-Title-Label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        white-space: normal;
+    }
+
+    .Market-Info-Display-Title {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .Market-Info-Select-Button {
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .Market-Info-Top-Container {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .Market-Info-Top-Container::-webkit-scrollbar {
+        height: 5px;
+        background-color: #01061d;
+    }
+    
+    .Market-Info-Top-Container::-webkit-scrollbar-thumb {
+        background: #F3E600;
+    }
+
+    .Market-Info-Title-Label {
+        height: auto;
+    }
+
+    .Market-Info-Title-Table-Row-Container,
+    .Market-Info-Row-Container{
+        min-width: 800px;    
+    } 
+    
+    .Market-Info-Title-Container,
+    .Market-Info-Row-Title-Container {
+        min-width: 200px;
+    }
+
+    .Market-Info-Warning-Label{
+        width: 90%;
+        overflow: hidden;
+        padding: 10px 0px 10px 0px;
+    }
 }

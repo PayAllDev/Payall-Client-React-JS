@@ -1,6 +1,6 @@
 // * Dependencies Required 
 import { useContext } from "react";
-import { MdSettings } from "react-icons/md"
+import { MdSubject } from "react-icons/md"
 
 // * Modules Required
 
@@ -16,26 +16,11 @@ import './styles/TopNavBar.css'
 
 const TopNavBar = () => {
 
-    {
+    return (
 
-        if (isMobileDevice() == false) {
+        <DesktopTopNavBar />
 
-            return (
-
-                <DesktopTopNavBar />
-
-            )
-
-        }
-
-        return (
-
-            <MobileTopNavBar />
-
-        )
-
-
-    }
+    )
 
 
 }
@@ -55,6 +40,7 @@ const DesktopTopNavBar = () => {
                 <TopNavBarLogo />
                 <TopNavBarMenu />
                 <TopNavBarActionButtons />
+                <TopNavBarMobileActionButtonContainer />
 
             </div>
 
@@ -186,6 +172,24 @@ const TopNavBarActionButtons = () => {
 
                 </div>
             </a>
+
+        </div>
+
+    )
+
+}
+
+const TopNavBarMobileActionButtonContainer = () => {
+
+    return (
+
+        <div className="Top-Nav-Bar-Mobile-Action-Button-Container">
+
+            <div className="Top-Nav-Bar-Mobile-Action-Button">
+
+                <MdSubject size={20} color="#ffffff" />
+
+            </div>
 
         </div>
 

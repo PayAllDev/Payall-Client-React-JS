@@ -13,6 +13,7 @@
 .Home-View-Project-Section {
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     background-color: #01061d;
     position: relative;
 }
@@ -88,4 +89,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width:0px) and (max-width:414px) {
+
+    .Home-View-Project-Section{
+        width: 100vw;
+        height: auto;
+        min-height: 140%;
+        overflow-y: hidden;
+    }
+
+    .Home-View-Project-Content{
+        height: auto;
+        min-height: 100%;
+    }
+
+    .Home-Project-Background-Shape-0{
+        display: none;
+    }
+
+    .Home-View-Project-Margin{
+        flex-direction: column;        
+    }
+
+    .Home-View-Project-Text-Container{
+        width: 100%;
+        padding-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .Home-View-Project-Title-Label {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .Home-View-Project-Text-Label {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .Home-View-Project-Animation-Container{
+        width: 100%;
+    }
+    
 }

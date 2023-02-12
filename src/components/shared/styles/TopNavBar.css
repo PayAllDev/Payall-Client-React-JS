@@ -46,7 +46,7 @@
     padding-left: 20px;
 }
 
-.menuLogo a img {
+.menuLogo a svg {
     width: 100%;
     max-height: 50px;
 }
@@ -202,4 +202,46 @@ nav ul li a:hover {
 
 .menuButton:hover {
     border-bottom: 5px solid #00000021;
+}
+
+.Top-Nav-Bar-Mobile-Action-Button-Container{
+    display: none;
+}
+
+@media screen and (min-width:0px) and (max-width:414px) {
+
+    .topMenuContent{
+        justify-content: space-between;
+    }
+
+    .menuLogo a svg {
+        width: 100%;
+        max-height: 40px;
+    }
+
+    .menuNav{
+        display: none;
+    }
+
+    .menuButtons{
+        display: none;
+    }
+
+    .Top-Nav-Bar-Mobile-Action-Button-Container{
+        width: 70px;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .Top-Nav-Bar-Mobile-Action-Button{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00eabe;
+        border-radius: 10px;
+    }
 }

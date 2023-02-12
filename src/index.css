@@ -32,4 +32,22 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #01061d;
+}
+
+@media screen and (min-width:0px) and (max-width:414px) {
+
+  * {
+    border: 0;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+
+  }
+
+  #root {
+  width: 100vw;
+  height: 100vh;
+}
+
 }
