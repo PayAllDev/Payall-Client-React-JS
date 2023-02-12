@@ -47,7 +47,7 @@ const HomeView_Desktop = () => {
             <TopSection />
             <ProjectSection />
             <ArticlesList />
-            <SimulatorSection />
+            {/* <SimulatorSection /> */}
             <MarketSection />
 
         </div>
@@ -76,9 +76,8 @@ const TopSection = () => {
                     <div className="Home-View-Text-Left-Side">
 
                         <h1 className="Home-View-Title-Label">Aprende sobre inversiones y crea un plan de retiro</h1>
-                        <p className="Home-View-subtitle-Label" >Sabias que el gobierno actual no resuelve un problema a futuro muy grande?</p>
-                        <p className="Home-View-subtitle-Label" >Pues ese problema es una estrategia de inversion para la poblecion de mexico</p>
-                        <p className="Home-View-subtitle-Label" >Aqui podras aprender tecnicas para aprender finanzas personales y como crear estrategias de inversion seguras</p>
+                        <p className="Home-View-subtitle-Label">¿Te has dado cuenta de que el gobierno actual no resuelve un problema futuro muy importante?</p>
+                        <p className="Home-View-subtitle-Label">Ese problema es la falta de una estrategia de inversión para la población de México. Aquí te ofrecemos la oportunidad de aprender técnicas efectivas para manejar tus finanzas personales y crear estrategias de inversión seguras que te permitan alcanzar tus objetivos financieros.</p>
 
                     </div>
 
@@ -124,8 +123,6 @@ const ProjectSection = () => {
 
                         <p className="Home-View-Project-Text-Label">También en caso de que no tengas mucha idea sobre inversiones y finanzas personales puedes acceder a muchos artículos en los cuales se enseña sobre los temas. Espero te sirva, si aun así tienes dudas no dudes en contactarme a través de mi correo <a href="mailto:armandoperalta.simulator@webdesignnodes.com">armandoperalta.simulator@webdesignnodes.com</a>  o a través de mi cuenta de Twitter <a href="https://twitter.com/XxTavo16xX">@XxTavo16xX</a></p>
 
-                        <p className="Home-View-Project-Text-Label">Intentare conseguir algún tipo de certificación y un premio para los mejores en la plataforma. </p>
-
                         <p className="Home-View-Project-Text-Label">Espero les guste. A competir.</p>
 
                     </div>
@@ -170,7 +167,7 @@ const ArticlesList = () => {
                 <div className="Home-View-Articles-Margin">
 
                     <h3 className="Home-View-Articles-Title-Label">Articulos para aprender</h3>
-                    <p className="Home-View-Article-Subtitle">A continuación, encontraras artículos que te pueden ser de ayuda proveídos por Banamex, Reto Actinver y new Bing search</p>
+                    <p className="Home-View-Article-Subtitle">A continuación, encontraras artículos que te pueden ser de ayuda.</p>
 
                     <div className="Home-View-Articles-Container">
 
@@ -179,8 +176,6 @@ const ArticlesList = () => {
                             {
 
                                 articlesData.map(element => {
-
-                                    console.log(element);
 
                                     return (
 
@@ -197,7 +192,7 @@ const ArticlesList = () => {
                                                 <p className="Article-Info-Title-Label">{element.articleName}</p>
 
                                                 <p className="Article-Info-Subtitle-Label">{element.articleSubtitle}</p>
-                                                
+
                                                 <p className="Article-Info-Author-Label">{element.articleAuthor}</p>
 
                                             </div>
@@ -299,23 +294,17 @@ const MarketContainer = () => {
 
             <div className="Market-Info-Display-Controller">
 
-                <div className={context.app.current_market == 'crypto' ? "Market-Info-Select-Button Market-Info-Selected-Option" : "Market-Info-Select-Button"} onClick={() => changeMarketSelected('crypto')}>
-
-                    Mercado de criptomonedas
-
-                </div>
-
-                <div className={context.app.current_market == 'mxn' ? "Market-Info-Select-Button Market-Info-Selected-Option" : "Market-Info-Select-Button"} onClick={() => changeMarketSelected('mxn')}>
-
-                    Mercado Nacional
-
-                </div>
-
-                <div className={context.app.current_market == 'snp500' ? "Market-Info-Select-Button Market-Info-Selected-Option" : "Market-Info-Select-Button"} onClick={() => changeMarketSelected('snp500')}>
+                <div className={context.app.current_market == 'SNP500' ? "Market-Info-Select-Button Market-Info-Selected-Option" : "Market-Info-Select-Button"} onClick={() => changeMarketSelected('SNP500')}>
 
                     Mercado Internacional
 
                 </div>
+
+                <div className={context.app.current_market == 'crypto' ? "Market-Info-Select-Button Market-Info-Selected-Option" : "Market-Info-Select-Button"} onClick={() => changeMarketSelected('crypto')}>
+
+                    Mercado de criptomonedas
+
+                </div>            
 
             </div>
 
@@ -346,7 +335,7 @@ const MarketContainer = () => {
                     {
 
                         // * This will display the results of the market selected
-                        context.app.current_market == 'crypto' ? CryptoMarketTableResults() : null
+                        context.app.current_market == 'SNP500' ? <SNPMarketTableResults /> : <CryptoMarketTableResults />
 
                     }
 
@@ -370,20 +359,22 @@ const MarketContainer = () => {
 
 const CryptoMarketTableResults = () => {
 
-    const [marketDataReceived, setmarketDataReceived] = useState([])
+    console.log('displaying crypto');
+
+    const [cryptoMarketDataReceived, setcryptoMarketDataReceived] = useState([])
 
     useEffect(() => {
         getMarketData('crypto')
             .then(data => {
-                setmarketDataReceived(data);
+                setcryptoMarketDataReceived(data);
             });
     }, [])
 
     return (
 
-        Object.keys(marketDataReceived).map((currentElementName) => {
+        Object.keys(cryptoMarketDataReceived).map((currentElementName) => {
 
-            const currentElementValues = marketDataReceived[currentElementName]
+            const currentElementValues = cryptoMarketDataReceived[currentElementName]
 
             return (
 
@@ -413,6 +404,50 @@ const CryptoMarketTableResults = () => {
 
     )
 
+}
+
+const SNPMarketTableResults = () => {
+
+    const [SNPMarktedDataReceived, setSNPMarktedDataReceived] = useState([])
+
+    useEffect(() => {
+        getMarketData('SNP500')
+            .then(data => {
+                setSNPMarktedDataReceived(data);
+            });
+    }, [])
+
+    return (
+
+        SNPMarktedDataReceived.map(element => {
+
+            return (
+
+                <div className="Market-Info-Row-Container" key={element.symbol}>
+
+                    <div className="Market-Info-Row-Title-Container">
+                        <p className="Market-Info-Text-Label">{element.name}</p>
+                    </div>
+
+                    <div className="Market-Info-Row-Title-Container">
+                        <p className="Market-Info-Text-Label">{formatToCurrency(element.price)}</p>
+                    </div>
+
+                    <div className="Market-Info-Row-Title-Container">
+                        <p className="Market-Info-Text-Label">{element.change}</p>
+                    </div>
+
+                    <div className="Market-Info-Row-Title-Container">
+                        <p className="Market-Info-Text-Label">{formatToCurrency(element.volume)}</p>
+                    </div>
+
+                </div>
+
+            )
+
+        })
+
+    )
 }
 
 
