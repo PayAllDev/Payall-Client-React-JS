@@ -11,7 +11,7 @@ const AppContext = React.createContext();
 const defaultContext = {
     app: {
         app_name: 'PayAll',
-        current_view: 'Home',
+        current_view: 'Simulator',
         current_market: 'SNP500'
     },
     user: {

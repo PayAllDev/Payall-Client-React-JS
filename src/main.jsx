@@ -17,6 +17,7 @@ import './index.css'
 import TopNavBar from './components/shared/TopNavBar'
 
 import Home_view from './views/home_view'
+import SimulatorView from './views/simulator_view'
 
 // * view to Return
 
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <TopNavBar />
 
       <Home_view />
+      <SimulatorView />
 
     </AppProvider>
 

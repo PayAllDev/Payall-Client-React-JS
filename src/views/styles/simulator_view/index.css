@@ -1,0 +1,122 @@
+.Simulator-View-Desktop-Container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.Simulator-View-Margin{
+    width: 98%;
+    height: calc(100% - 70px);
+}
+
+.Simulator-Top-Bar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Simulator-Top-Market-State{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Market-Search-Container{
+    width: 49%;
+    height: 40px;
+    background-color: #fafbff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: not-allowed;
+}
+
+.Market-Search-Input{
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-family: PoppinsLight;
+    color: #01061d;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+.Market-Local-Currency-SelecBox{
+    width: 49%;
+    height: 40px;
+    background-color: #fafbff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: not-allowed;
+}
+
+.Market-Local-Currency-SelecBox-Margin{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Market-Local-Currency-Selected-Label{
+    width: calc(100% - 40px);
+    font-family: PoppinsMedium;
+    color: #01061d;
+    cursor: not-allowed;
+}
+
+.Simulator-Top-Market-Options{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Simulator-Market-Option-Button {
+    padding: 10px 20px 10px 20px;
+    font-family: PoppinsLight;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #ffffff39;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.Simulator-Market-Option-Selected {
+    background-color: #00eabe;
+    color: #01061d;
+}
+
+.Simulator-Top-Market-Curreny{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Simulator-Currency-Container{
+    padding: 10px 20px 10px 20px;
+    font-family: PoppinsLight;
+    font-size: 14px;
+    color: #01061d;
+    border-radius: 15px;
+    background-color: #ffffff;
+    margin-right: 10px;
+    cursor: default;   
+}
