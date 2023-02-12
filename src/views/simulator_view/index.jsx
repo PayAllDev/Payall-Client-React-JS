@@ -7,6 +7,8 @@ import { MdClose, MdKeyboardArrowDown } from "react-icons/md"
 // * Modules Required
 
 import { AppContext } from "../../app/Context";
+import { getMarketDataSimulator } from "../../services";
+import { formatToCurrency, formatPercentage, formatToNumber } from "../../lib/display";
 
 // * view Styles
 
@@ -29,6 +31,15 @@ const SimulatorView = () => {
 }
 
 const Simulator_Desktop = () => {
+
+    const [marketDataReceived, setMarketDataReceived] = useState([])
+
+    useEffect(() => {
+        getMarketDataSimulator('SNP500')
+            .then(data => {
+                setMarketDataReceived(data);
+            });
+    }, [])
 
     return (
 
@@ -76,6 +87,12 @@ const Simulator_Desktop = () => {
 
                         </div>
 
+                        <div className="Simulator-Market-Option-Button">
+
+                            Clasificacion
+
+                        </div>
+
                     </div>
 
                     <div className="Simulator-Top-Market-Curreny">
@@ -89,6 +106,139 @@ const Simulator_Desktop = () => {
                         <div className="Simulator-Currency-Container">
 
                             EUR: $19.93
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="Simulator-Market-Wallet-Container">
+
+                    <div className="Simulator-Market-Container">
+
+                        <div className="Simulator-Title-Container">
+
+                            <p className="Simulator-Title-Label">Informacion de mercado</p>
+
+                        </div>
+
+                        <div className="Simulator-Market-Table-Header">
+
+                            <div className="Simulator-Market-Data-Container">
+
+                                <p className="Simulator-Market-Data-Label">Nombre</p>
+
+                            </div>
+
+                            <div className="Simulator-Market-Data-Container">
+
+                                <p className="Simulator-Market-Data-Label">Precio</p>
+
+                            </div>
+
+                            <div className="Simulator-Market-Data-Container">
+
+                                <p className="Simulator-Market-Data-Label">Cambio</p>
+
+                            </div>
+
+                            <div className="Simulator-Market-Data-Container">
+
+                                <p className="Simulator-Market-Data-Label">Volumen</p>
+
+                            </div>
+
+                            <div className="Simulator-Market-Data-Container">
+
+                                <p className="Simulator-Market-Data-Label">Movimiento</p>
+
+                            </div>
+
+                        </div>
+
+                        <div className="Simulator-Market-Result-Table-Container">
+
+                            {
+
+                                marketDataReceived.map(element => {
+
+                                    return (
+
+                                        <div className="Simulator-Market-Table-Header" key={element.symbol}>
+
+                                            <div className="Simulator-Market-Data-Container">
+
+                                                <p className="Simulator-Market-Value-Label">{element.symbol + ' - ' + element.name}</p>
+
+                                            </div>
+
+                                            <div className="Simulator-Market-Data-Container">
+
+                                                <p className="Simulator-Market-Value-Label">{formatToCurrency([element.price * 19.69])}</p>
+
+                                            </div>
+
+                                            <div className="Simulator-Market-Data-Container">
+
+                                                <p className="Simulator-Market-Value-Label">{formatPercentage(element.changesPercentage)}</p>
+
+                                            </div>
+
+                                            <div className="Simulator-Market-Data-Container">
+
+                                                <p className="Simulator-Market-Value-Label">{formatToNumber(element.volume)}</p>
+
+                                            </div>
+
+                                            <div className="Simulator-Market-Data-Container Simulator-Market-Action-Container">
+
+                                                <div className="Simulator-Market-Button Simulator-Market-Buy"> Comprar </div>
+                                                <div className="Simulator-Market-Button Simulator-Market-Sell"> Vender </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    )
+
+                                })
+
+                            }
+
+                        </div>
+
+                    </div>
+
+                    <div className="Simulator-Wallet-Container">
+
+                        <div className="Simulator-Title-Container">
+
+                            <p className="Simulator-Title-Label">Cartera</p>
+
+                        </div>
+
+                        <div className="Simulator-Wallet-Balance-Container">
+
+                            <div className="Simulator-Wallet-Balance-Data-Container">
+
+                                <div className="Simulator-Wallet-Balance-Box">
+
+                                    <p className="Simulator-Wallet-Data-Title-Label">Balance</p>
+
+                                    <p className="Simulator-Wallet-Data-Value-Label">$1,000,042.00</p>
+
+                                </div>
+
+                                <div className="Simulator-Wallet-Status-Box">
+
+                                    <p className="Simulator-Wallet-Data-Title-Label">Estado</p>
+
+                                    <p className="Simulator-Wallet-Data-Value-Label">Sin cambios</p>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
