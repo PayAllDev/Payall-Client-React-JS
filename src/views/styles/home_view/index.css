@@ -3,6 +3,7 @@
     height: 100%;
     min-width: 1920px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .Home-View-Desktop-Container::-webkit-scrollbar {

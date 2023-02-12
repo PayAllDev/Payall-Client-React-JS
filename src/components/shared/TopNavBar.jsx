@@ -149,11 +149,11 @@ const TopNavBarMenu = () => {
 
                 <ul>
 
-                    <li><a id="Menusections3">Inicio</a></li>
-                    <li><a id="Menusections3">Proyecto</a></li>
-                    <li><a id="Menusections3">Aprende con Articulos</a></li>
-                    <li><a id="Menusections3">Simulador</a></li>
-                    <li><a id="Menusections3">Mercado</a></li>
+                    <li><a href="#top" id="Menusections3">Inicio</a></li>
+                    <li><a href="#project" id="Menusections3">Proyecto</a></li>
+                    <li><a href="#learn" id="Menusections3">Aprende con Articulos</a></li>
+                    <li><a href="#simulator" id="Menusections3">Simulador</a></li>
+                    <li><a href="#market" id="Menusections3">Mercado</a></li>
 
                 </ul>
 
@@ -186,12 +186,6 @@ const TopNavBarActionButtons = () => {
 
                 </div>
             </a>
-
-            <div className="menuSquareButton menuButton" id="menuButtonShowSettings">
-
-                <MdSettings color="#01061d" size={24} />
-
-            </div>
 
         </div>
 
